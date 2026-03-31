@@ -8,7 +8,7 @@ use App\Models\Book;
 class BookController extends Controller
 {
      public function contact() {
-        return view('contact');
+        return view('general.contact');
     }
 
          public function about() {
@@ -46,8 +46,8 @@ class BookController extends Controller
     }
 
     public function update($id) {
-        $book = Book::update();
-        return view('books.index', ['editBook' => $book]);
+        $book = Book::update($id);
+        return view('books.index');
     }
 
     public function destroy($id) {
