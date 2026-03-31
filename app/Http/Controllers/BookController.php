@@ -7,6 +7,15 @@ use App\Models\Book;
 
 class BookController extends Controller
 {
+     public function contact() {
+        return view('contact');
+    }
+
+         public function about() {
+        return view('about');
+    }
+
+
     public function index() {
         $books = Book::all();
         return view('books.index', ['books' => $books]);

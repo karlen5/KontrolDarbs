@@ -1,6 +1,8 @@
 <h1>Edit book</h1>
 
 <form action="/posts/{{ $editBook->id }}/update" method="post">
+    @csrf
+    @method('PUT')
   <div>
     <label for="title">Title: </label>
     <input type="text" name="title" value='{{$editBook->title}}'/>
