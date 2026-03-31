@@ -36,6 +36,11 @@ class BookController extends Controller
         return view('books.edit', ['editBook' => $book]);
     }
 
+    public function update($id) {
+        $book = Book::update();
+        return view('books.index', ['editBook' => $book]);
+    }
+
     public function destroy() {
         $book->delete();
         return redirect('/books');
