@@ -1,0 +1,1 @@
+<a href="/books/create">Create a book</a>
